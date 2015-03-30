@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>DIA DE INGRESO</strong>
+  <%= @entry.dateof %>
+</p>
+
+<p>
+  <strong>COLECTOR</strong>
+  <%= @entry.origin %>
+</p>
+
+<p>
+  <strong>ANIMAL</strong>
+  
+  <%= @entry.animal %>
+</p>
+
+<%= link_to 'Edit', edit_entry_path(@entry) %> |
+<%= link_to 'Back', entries_path %>

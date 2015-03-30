@@ -1,0 +1,45 @@
+<%= form_for(@egress) do |f| %>
+  <% if @egress.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@egress.errors.count, "error") %> prohibited this egress from being saved:</h2>
+
+      <ul>
+      <% @egress.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :date %><br>
+    <%= f.date_select :date %>
+  </div>
+  <div class="field">
+    <%= f.label :cause %><br>
+    <%= f.text_area :cause %>
+  </div>
+  <div class="field">
+    <%= f.label :reproduction %><br>
+    <%= f.text_area :reproduction %>
+  </div>
+  <div class="field">
+    <%= f.label :age %><br>
+    <%= f.number_field :age %>
+  </div>
+  <div class="field">
+    <%= f.label :causedeath %><br>
+    <%= f.text_area :causedeath %>
+  </div>
+  <div class="field">
+    <%= f.label :observations %><br>
+    <%= f.text_area :observations %>
+  </div>
+  <div class="field">
+    <%= f.label :animal_id %><br>
+    <%= f.text_field :animal_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

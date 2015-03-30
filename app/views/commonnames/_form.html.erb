@@ -1,0 +1,25 @@
+<%= form_for(@commonname) do |f| %>
+  <% if @commonname.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@commonname.errors.count, "error") %> prohibited this commonname from being saved:</h2>
+
+      <ul>
+      <% @commonname.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :kind_id %><br>
+    <%= f.select :kind_id, Kind.all.map{|k|[k.name,k.id]} %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

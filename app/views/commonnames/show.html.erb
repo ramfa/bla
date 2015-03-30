@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @commonname.name %>
+</p>
+
+<p>
+  <strong>Kind:</strong>
+  <%= @commonname.kind %>
+</p>
+
+<%= link_to 'Edit', edit_commonname_path(@commonname) %> |
+<%= link_to 'OK', new_animal_path %>

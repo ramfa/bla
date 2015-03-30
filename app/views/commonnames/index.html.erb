@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listado de Nombre Vulgar</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th><%= link_to "Nombre Vulgar", commonnames_path(order: "name") %></th>
+      <th><%= link_to "Especie"%></th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @commonnames.each do |commonname| %>
+      <tr>
+        <td><%= commonname.name %></td>
+        <td><% if commonname.kind %>
+        <%= commonname.kind.name %>
+        <% end %></td>
+        <td><%= link_to 'Show', commonname %></td>
+        <td><%= link_to 'Edit', edit_commonname_path(commonname) %></td>
+        <td><%= link_to 'Destroy', commonname, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Commonname', new_commonname_path %>
+<%= link_to 'New Animal', new_animal_path %>

@@ -1,0 +1,45 @@
+<%= form_for(@animal) do |f| %>
+  <% if @animal.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@animal.errors.count, "error") %> prohibited this animal from being saved:</h2>
+
+      <ul>
+      <% @animal.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :weight %><br>
+    <%= f.number_field :weight %>
+  </div>
+  <div class="field">
+    <%= f.label :numbertag %><br>
+    <%= f.number_field :numbertag %>
+  </div>
+  <div class="field">
+    <%= f.label :microchip %><br>
+    <%= f.number_field :microchip %>
+  </div>
+  <div class="field">
+    <%= f.label :capturedate %><br>
+    <%= f.date_select :capturedate %>
+  </div>
+  <div class="field">
+    <%= f.label :age %><br>
+    <%= f.number_field :age %>
+  </div>
+  <div class="field">
+    <%= f.label :commonname_id %><br>
+    <%= f.select :commonname_id, Commonname.all.map { |c|[c.name,c.id]  } %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

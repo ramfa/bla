@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @egress.date %>
+</p>
+
+<p>
+  <strong>Cause:</strong>
+  <%= @egress.cause %>
+</p>
+
+<p>
+  <strong>Reproduction:</strong>
+  <%= @egress.reproduction %>
+</p>
+
+<p>
+  <strong>Age:</strong>
+  <%= @egress.age %>
+</p>
+
+<p>
+  <strong>Causedeath:</strong>
+  <%= @egress.causedeath %>
+</p>
+
+<p>
+  <strong>Observations:</strong>
+  <%= @egress.observations %>
+</p>
+
+<p>
+  <strong>Animal:</strong>
+  <%= @egress.animal %>
+</p>
+
+<%= link_to 'Edit', edit_egress_path(@egress) %> |
+<%= link_to 'Back', egresses_path %>

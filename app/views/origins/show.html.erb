@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Colector:</strong>
+  <%= @origin.colector %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @origin.address %>
+</p>
+
+<p>
+  <strong>Feeding:</strong>
+  <%= @origin.feeding %>
+</p>
+
+<p>
+  <strong>Capmethod:</strong>
+  <%= @origin.capmethod %>
+</p>
+
+<p>
+  <strong>Features:</strong>
+  <%= @origin.features %>
+</p>
+
+<p>
+  <strong>Province:</strong>
+  <%= @origin.province %>
+</p>
+
+<%= link_to 'Edit', edit_origin_path(@origin) %> |
+<%= link_to 'Ok', new_animal_path %>

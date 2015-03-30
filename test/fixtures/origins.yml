@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  colector: MyText
+  address: MyString
+  feeding: MyText
+  capmethod: MyText
+  features: MyText
+  province_id: 
+
+two:
+  colector: MyText
+  address: MyString
+  feeding: MyText
+  capmethod: MyText
+  features: MyText
+  province_id: 

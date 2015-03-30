@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @animal.name %>
+</p>
+
+<p>
+  <strong>Weight:</strong>
+  <%= @animal.weight %>
+</p>
+
+<p>
+  <strong>Numbertag:</strong>
+  <%= @animal.numbertag %>
+</p>
+
+<p>
+  <strong>Microchip:</strong>
+  <%= @animal.microchip %>
+</p>
+
+<p>
+  <strong>Capturedate:</strong>
+  <%= @animal.capturedate %>
+</p>
+
+<p>
+  <strong>Age:</strong>
+  <%= @animal.age %>
+</p>
+
+<p>
+  <strong>Commonname:</strong>
+  <%= @animal.commonname %>
+</p>
+
+<%= link_to 'Edit', edit_animal_path(@animal) %> |
+<%= link_to 'OK', new_entry_path %>

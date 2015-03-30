@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  dateof: 2015-02-22
+  origin_id: 
+  animal_id: 
+
+two:
+  dateof: 2015-02-22
+  origin_id: 
+  animal_id: 
