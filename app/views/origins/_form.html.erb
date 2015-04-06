@@ -14,25 +14,35 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :colector %><br>
+    <%= f.label :donador %><br>
     <%= f.text_area :colector %>
   </div>
   <div class="field">
-    <%= f.label :address %><br>
+    <%= f.label :dirección %><br>
     <%= f.text_field :address %>
   </div>
   <div class="field">
-    <%= f.label :feeding %><br>
+    <%= f.label :alimentación_del_animal %><br>
     <%= f.text_area :feeding %>
   </div>
   <div class="field">
-    <%= f.label :capmethod %><br>
+    <%= f.label :método_de_captura %><br>
     <%= f.text_area :capmethod %>
   </div>
   <div class="field">
-    <%= f.label :features %><br>
+    <%= f.label :características_distintivas %><br>
     <%= f.text_area :features %>
   </div>
+  <%= form_for(@origin) do |f| %>
+  <p>
+    <%= f.label :provincia %><br />      
+    <%=  collection_select(:province_id,:origin, Province.all, :id, :name , options ={:prompt => "Seleccione una Provincia"} ) %>
+    </p>
+  <p>
+    <%= f.label :localidad %><br />      
+    <%= collection_select(:province_id, :locality_id, Locality.where(province_id: :origin),:id,:name, options ={:prompt => "Seleccione una Localidad"}) %>
+  </p>
+<% end %>
 
   <div class="actions">
     <%= f.submit %>

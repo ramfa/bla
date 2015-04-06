@@ -14,26 +14,26 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li class="active"> <%= link_to "Home", page_path('origins') %> </li>
-        <li> <%= link_to "Registrar Ingreso", entries_path %> </li>
+        <li class="active"> <%= link_to "Home", page_path('origins')%> </li>
+        <li> <%= link_to "Registrar Ingreso", new_entry_path %> </li>
         <li> <%= link_to "Historia Clinica", histories_path %> </li>
         <li> <%= link_to "Registrar Egreso", egresses_path %> </li>
         <li> <%= link_to "Alimentación", entries_path %> </li>
         <li> <%= link_to "Protocolo de Necropsia", entries_path %> </li>
         <li> <%= link_to "Contencion Quimica", entries_path %> </li>
         <li> <%= link_to "Reporte de Liberacion", entries_path %> </li>
-        <li> <%= link_to "Medicamentos", entries_path %> </li>
+       <!--  <%= link_to "Medicamentos", entries_path %> -->
       </ul>
 
     </div><!-- /.navbar-collapse -->
 
   </div><!-- /.container-fluid -->
-<% if user_signed_in? %>
-  Logueado como<strong><%= current_user.email %></strong>.
+<br><% if user_signed_in? %>
+  Logueado como: <strong><%= current_user.email %></strong>.
   <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
   <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
 <% else %>
   <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
   <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
-<% end %>
+<% end %></br>
 </nav>

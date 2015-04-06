@@ -1,17 +1,17 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Animals</h1>
+<h1>Listado de Animales</h1>
 
 <table>
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Weight</th>
-      <th>Numbertag</th>
+      <th>Nombre</th>
+      <th>Peso</th>
+      <th>Número Etiqueta</th>
       <th>Microchip</th>
-      <th>Capturedate</th>
-      <th>Age</th>
-      <th>Commonname</th>
+      <th>Día de Captura</th>
+      <th>Edad</th>
+      <th>Nombre Vulgar</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -29,9 +29,9 @@
         <%= animal.commonname.name %>
         <% end %>
         </td>
-        <td><%= link_to 'Show', animal %></td>
-        <td><%= link_to 'Edit', edit_animal_path(animal) %></td>
-        <td><%= link_to 'Destroy', animal, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Ver', animal %></td>
+        <td><%= link_to 'Editar', edit_animal_path(animal) %></td>
+        <td><%= link_to 'Eliminar', animal, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -39,5 +39,5 @@
 
 <br>
 
-<%= link_to 'New Animal', new_animal_path %>
-<%= link_to 'Volver', entries_path %>
+<%= link_to 'Nuevo Animal', new_animal_path %> |
+<%= link_to 'Atrás', new_entry_path %>

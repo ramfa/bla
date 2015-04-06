@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Provinces</h1>
+<h1>Listado de Provincias</h1>
 
 <table>
   <thead>
@@ -14,9 +14,9 @@
     <% @provinces.each do |province| %>
       <tr>
         <td><%= province.name %></td>
-        <td><%= link_to 'Show', province %></td>
-        <td><%= link_to 'Edit', edit_province_path(province) %></td>
-        <td><%= link_to 'Destroy', province, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Ver', province %></td>
+        <td><%= link_to 'Editar', edit_province_path(province) %></td>
+        <td><%= link_to 'Eliminar', province, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -24,6 +24,5 @@
 
 <br>
 
-<%= link_to 'New Province', new_province_path %>
-<%= link_to 'Nueva Localidad', new_locality_path %>
+<%= link_to 'Nueva Provincia', new_province_path %>
 <%= link_to 'Volver', entries_path %>

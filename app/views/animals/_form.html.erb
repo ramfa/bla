@@ -12,15 +12,15 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :name %><br>
+    <%= f.label :nombre %><br>
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :weight %><br>
+    <%= f.label :peso %><br>
     <%= f.number_field :weight %>
   </div>
   <div class="field">
-    <%= f.label :numbertag %><br>
+    <%= f.label :numero_etiqueta %><br>
     <%= f.number_field :numbertag %>
   </div>
   <div class="field">
@@ -28,15 +28,15 @@
     <%= f.number_field :microchip %>
   </div>
   <div class="field">
-    <%= f.label :capturedate %><br>
+    <%= f.label :dia_de_captura %><br>
     <%= f.date_select :capturedate %>
   </div>
   <div class="field">
-    <%= f.label :age %><br>
+    <%= f.label :edad %><br>
     <%= f.number_field :age %>
   </div>
   <div class="field">
-    <%= f.label :commonname_id %><br>
+    <%= f.label :nombre_vulgar %><br>
     <%= f.select :commonname_id, Commonname.all.map { |c|[c.name,c.id]  } %>
   </div>
   <div class="actions">

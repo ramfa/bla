@@ -12,15 +12,15 @@
   <% end %>
  
   <div class="field">
-    <%= f.label :dateof %><br>
+    <%= f.label :fecha %><br>
     <%= f.date_select :dateof %>
   </div>
   <div class="field">
-    <%= f.label :origin_id %><br>
+    <%= f.label :donador %><br>
     <%= f.select :origin_id, Origin.all.map { |o|[o.colector,o.id]  } %>
   </div>
   <div class="field">
-    <%= f.label :animal_id %><br>
+    <%= f.label :nombre_del_animal %><br>
     <%= f.select :animal_id, Animal.all.map { |a|[a.name,a.id]  } %>
   </div>
   <div class="actions">

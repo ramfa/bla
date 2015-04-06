@@ -20,8 +20,11 @@ Rails.application.routes.draw do
   resources :localities
 
   resources :provinces
+  
+  get 'pages' => 'pages#origins'
 
-  root 'entries#index'
+  root 'entries#new'
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

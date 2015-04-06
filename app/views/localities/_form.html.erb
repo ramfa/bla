@@ -17,7 +17,7 @@
   </div>
   <div class="field">
     <%= f.label :provincia %><br>
-    <%= f.select :province_id, Province.all.map { |p|[p.name,p.id]  },options ={:prompt => "Seleccione una localidad"} %>
+    <%= f.select :province_id, Province.all.map { |p|[p.name,p.id]  },options ={:prompt => "Seleccione una Provincia"} %>
   </div>
   <div class="actions">
     <%= f.submit %>

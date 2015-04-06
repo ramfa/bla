@@ -5,8 +5,8 @@
 <table>
   <thead>
     <tr>
-      <th> <%= link_to"Localidad", localities_path(order:'name') %> </th>
       <th><%= link_to"Provincia", localities_path(order:'province_name') %></th>
+      <th> <%= link_to"Localidad", localities_path(order:'name') %> </th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -14,12 +14,13 @@
   <tbody>
     <% @localities.each do |locality| %>
       <tr>
-        <td><%= locality.name %></td>
-
         <td><%if locality.province %>
         <%= locality.province.name %>
         <% end %>
         </td>
+        <td><%= locality.name %></td>
+
+        
         <td><%= link_to 'Mostrar', locality %></td>
         <td><%= link_to 'Editar', edit_locality_path(locality) %></td>
         <td><%= link_to 'Eliminar', locality, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -31,4 +32,4 @@
 <br>
 
 <%= link_to 'Nueva Localidad', new_locality_path %>
-<%= link_to 'Volver', entries_path %>
+<%= link_to 'Atras', entries_path %>

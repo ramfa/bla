@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Registrar Ingreso</h1>
+<h1>Listado de Ingresos</h1>
 <%= link_to 'Localidad', localities_path %>
 <%= link_to 'Provincia', provinces_path %>
 <%= link_to 'Origen', origins_path %>
@@ -9,7 +9,7 @@
   <thead>
     <tr>
       <th><%= link_to "Dia de Entrada",entries_path(order: 'dateof') %></th>
-      <th>Origin</th>
+      <th>Donador</th>
       <th>Animal</th>
       <th colspan="3"></th>
     </tr>
@@ -27,9 +27,9 @@
         <%= entry.animal.name %>
         <% end %>
         </td>
-        <td><%= link_to 'Show', entry %></td>
-        <td><%= link_to 'Edit', edit_entry_path(entry) %></td>
-        <td><%= link_to 'Destroy', entry, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Ver', entry %></td>
+        <td><%= link_to 'Editar', edit_entry_path(entry) %></td>
+        <td><%= link_to 'Eliminar', entry, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
