@@ -1,6 +1,6 @@
 class OriginsController < ApplicationController
   before_action :set_origin, only: [:show, :edit, :update, :destroy]
-
+  before_action :set_provinces, only: [:new, :edit, :create, :update]
   # GET /origins
   # GET /origins.json
   def index
@@ -40,6 +40,7 @@ class OriginsController < ApplicationController
   # PATCH/PUT /origins/1
   # PATCH/PUT /origins/1.json
   def update
+   
     respond_to do |format|
       if @origin.update(origin_params)
         format.html { redirect_to @origin, notice: 'Origin was successfully updated.' }
@@ -70,5 +71,8 @@ class OriginsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def origin_params
       params.require(:origin).permit(:colector, :address, :feeding, :capmethod, :features, :province_id)
+    end
+    def set_provinces
+      @provinces=Province.order("name").all
     end
 end
