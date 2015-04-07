@@ -36,11 +36,10 @@
   <%= form_for(@origin) do |f| %>
   <p>
     <%= f.label :provincia %><br />      
-    <%=  collection_select(:province_id,:origin, Province.all, :id, :name , options ={:prompt => "Seleccione una Provincia"} ) %>
+    <%=  f.grouped_collection_select(:locality_id, @provinces, :localities, :name, :id, :name , options ={:prompt => "Seleccione una Localidad"} ) %>
     </p>
   <p>
-    <%= f.label :localidad %><br />      
-    <%= collection_select(:province_id, :locality_id, Locality.where(province_id: :origin),:id,:name, options ={:prompt => "Seleccione una Localidad"}) %>
+    
   </p>
 <% end %>
 
