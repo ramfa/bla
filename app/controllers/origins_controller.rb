@@ -70,7 +70,7 @@ class OriginsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def origin_params
-      params.require(:origin).permit(:colector, :address, :feeding, :capmethod, :features, :province_id)
+      params.require(:origin).permit(:colector, :address, :feeding, :capmethod, :features, :locality_id)
     end
     def set_provinces
       @provinces=Province.order("name").all

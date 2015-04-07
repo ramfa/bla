@@ -33,15 +33,11 @@
     <%= f.label :características_distintivas %><br>
     <%= f.text_area :features %>
   </div>
-  <%= form_for(@origin) do |f| %>
-  <p>
-    <%= f.label :provincia %><br />      
+  
+  <div class="field">
+    <%= f.label :provincia %><br>      
     <%=  f.grouped_collection_select(:locality_id, @provinces, :localities, :name, :id, :name , options ={:prompt => "Seleccione una Localidad"} ) %>
-    </p>
-  <p>
-    
-  </p>
-<% end %>
+  </div>
 
   <div class="actions">
     <%= f.submit %>
