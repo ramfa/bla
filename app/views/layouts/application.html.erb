@@ -1,24 +1,90 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Reserva Experimental Horco Molle</title>
-  <p class="navbar-text pull-right">
+	<style type="text/css">
+	#section {
+    width:240px;
+    float:left;
+    padding:10px;
+    background: none repeat scroll 0% 0% #1A1E22;
+    height: 0%;
+    left: 0px;
+    top:0px;
+    text-align: left;
+    /*
+    width: 220px;
+    font-family: "Raleway",sans-serif;
+    */
+		}
+    #section .navbar-stacked{
+      margin: 7.5px -15px;
+    }
+    #section .navbar{
+          border-radius: 0px;
+    
+    border: medium none;
+    padding-top: 20%;
+}#section .navbar-header{
+  margin-left
+}
 
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
+#section .navbar-collapse{
+  padding-right: 15px;
+padding-left: 15px;
+}    
+    img {
+    /*position: absolute;*/
+    margin: auto;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+}
+		#footer{
+		text-align:right;
+		}
+		#section2 {
+      top: 100px;
+    right: 0px;
+    bottom: 0px;
+    left: 100px;
+    text-align: left;
+    float:left;
+     }
+     #main-wrapper{
+      width: 100%;
+position: relative;
+     }
+  	</style>
+  	<title>Reserva Experimental Horco Molle</title>
+  	<p class="navbar-text pull-right">
+  	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  	<%= csrf_meta_tags %>
+	
 </head>
-<body>
-
-<%= render 'share/navbar' %>
-
-<% if notice %>
-  <p class="alert alert-notice"><%= notice %></p>
+<body>     
+  
+<div id="main-wrapper">
+<div id="section">
+  <%= render 'share/navbar'%>	
+</div>
+<%= render 'share/alert' %>
+<div id="section2">
+<%= yield %>  
+</div>
+</div>
+<div id="footer">
+	<p class="navbar-text pull-right">
+<% if user_signed_in? %>
+  Logueado como: <strong><%= current_user.email %></strong>.
+  <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
+  <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+<% else %>
+  <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
+  <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
 <% end %>
-<% if alert %>
-  <p class="alert alert-error"><%= alert %></p>
-<% end %>
-<%= yield %>
-
+</p>
+</div>
 </body>
 </html>
