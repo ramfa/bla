@@ -19,14 +19,16 @@
   
     <div class="collapse navbar-collapse" id="bs-example-navbar- collapse-1">
       <ul class="nav navbar-stacked " ><!--coloca en vertical--><tr>
-        <li class="active"> <%= link_to "Home", page_path('origins')%> </li>
-        <li> <%= link_to "Registrar Ingreso", new_entry_path %> </li>
-        <li> <%= link_to "Historia Clinica", histories_path %> </li>
-        <li> <%= link_to "Registrar Egreso", egresses_path %> </li>
-        <li> <%= link_to "Alimentación", entries_path %> </li>
-        <li> <%= link_to "Protocolo de Necropsia", entries_path %> </li>
-        <li> <%= link_to "Contencion Quimica", entries_path %> </li>
-        <li> <%= link_to "Reporte de Liberacion", entries_path %> </li>
+        <li class="active">
+        <i class="glyphicon glyphicon-home">
+        <%= link_to "Inicio", page_path('origins') %></i></li><br>
+        <li><i class="glyphicon glyphicon-log-in"> <%= link_to "Registrar Ingreso", new_entry_path %></i> </li><br>
+        <li> <i class="glyphicon glyphicon-book"> <%= link_to "Historia Clínica", histories_path %></i> </li><br>
+        <li><i class="glyphicon glyphicon-new-window"> <%= link_to "Registrar Egreso", egresses_path %></i> </li><br>
+        <li><i class="glyphicon glyphicon-shopping-cart"> <%= link_to "Alimentación", entries_path %></i> </li><br>
+        <li><i class="glyphicon glyphicon-list-alt"> <%= link_to "Protocolo Necropsia", entries_path %></i> </li><br>
+        <li> <i class="glyphicon glyphicon-warning-sign"> <%= link_to "Contencion Quimica", entries_path %></i> </li><br>
+        <li><i class="glyphicon glyphicon-tags"> <%= link_to "Reporte de Liberacion", entries_path %></i> </li><br>
         <!--  <%= link_to "Medicamentos", entries_path %> -->
       </tr>
       </ul>

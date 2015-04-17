@@ -6,7 +6,7 @@
     width:240px;
     float:left;
     padding:10px;
-    background-color:#48E13D;
+    background-color:#000000;
     height: 0%;
     left: 0px;
     top:0px;
@@ -18,20 +18,22 @@
     */
 		}
     #section .navbar-stacked{
-     position: relative; 
-     width: 200px; 
-     margin-left: 0px;
-    margin-left-value: 170px;
+     position: relative;
+     position-text: left; 
+     width: 180px; 
+     margin-top: 200px;
+    /*margin-left-value: 170px;
     margin-left-ltr-source: physical;
-    margin-left-rtl-source: physical; 
+    margin-left-rtl-source: physical;*/ 
       /*height: 70px;
-    
-    
     */
     }
+    .nav li a {
+    color:s;
+    text-decoration: none;
+}
     #section .navbar{
-          border-radius: 0px;
-    
+    border-radius: 0px;
     border: medium none;
     padding-top: 20%;
 }#section .navbar-header{
@@ -67,6 +69,9 @@ padding-left: 15px;
      /* margin: 0px auto;*/
       width: 1000px;
      }
+     #container-fluid{
+      width: 
+     }
   	</style>
   	<title>Reserva Experimental Horco Molle</title>
   	<p class="navbar-text pull-right">
@@ -89,7 +94,7 @@ padding-left: 15px;
 <div id="footer">
 	<p class="navbar-text pull-right">
 <% if user_signed_in? %>
-  Logueado como: <strong><%= current_user.email %></strong>.
+  <i class="glyphicon glyphicon-user"></i> <strong><%= current_user.email %></strong>.
   <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
   <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
 <% else %>
