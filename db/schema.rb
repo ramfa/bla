@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150417221258) do
+ActiveRecord::Schema.define(version: 20150420202919) do
 
   create_table "Animals", force: :cascade do |t|
     t.string   "name"
@@ -88,12 +88,15 @@ ActiveRecord::Schema.define(version: 20150417221258) do
   add_index "localities", ["province_id"], name: "index_localities_on_province_id"
 
   create_table "medicins", force: :cascade do |t|
-    t.string   "name"
-    t.string   "drug"
-    t.integer  "quantity"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string   "nombre"
+    t.string   "droga"
+    t.integer  "cantidad"
+    t.integer  "tratamiento_id"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
   end
+
+  add_index "medicins", ["tratamiento_id"], name: "index_medicins_on_tratamiento_id"
 
   create_table "origins", force: :cascade do |t|
     t.string   "colector"
