@@ -35,7 +35,7 @@
   </div>
   
   <div class="field">
-    <%= f.label :provincia %><br>      
+    <%= f.label :localidad %><br>      
     <%=  f.grouped_collection_select(:locality_id, @provinces, :localities, :name, :id, :name , options ={:prompt => "Seleccione una Localidad"} ) %>
   </div>
 
