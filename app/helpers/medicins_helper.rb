@@ -1,0 +1,2 @@
+module MedicinsHelper
+end

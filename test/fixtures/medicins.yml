@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nombre: MyString
+  droga: MyString
+  cantidad: 1
+  tratamiento_id: 
+
+two:
+  nombre: MyString
+  droga: MyString
+  cantidad: 1
+  tratamiento_id: 

@@ -1,0 +1,29 @@
+<%= form_for(@tratamiento) do |f| %>
+  <% if @tratamiento.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@tratamiento.errors.count, "error") %> prohibited this tratamiento from being saved:</h2>
+
+      <ul>
+      <% @tratamiento.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :fecha %><br>
+    <%= f.date_select :fecha %>
+  </div>
+  <div class="field">
+    <%= f.label :signos_clinicos %><br>
+    <%= f.text_area :signos_clinicos %>
+  </div>
+  <div class="field">
+    <%= f.label :nombre_animal %><br>      
+    <%= f.grouped_collection_select(:animal_id, @commonnames, :animals, :name, :id, :name , options ={:prompt => "Seleccione un Animal"} ) %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

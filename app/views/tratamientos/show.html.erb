@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Fecha:</strong>
+  <%= @tratamiento.fecha %>
+</p>
+
+<p>
+  <strong>Signos clinicos:</strong>
+  <%= @tratamiento.signos_clinicos %>
+</p>
+
+<p>
+  <strong>Commonname:</strong>
+  <%= @tratamiento.commonname %>
+</p>
+
+<%= link_to 'Edit', edit_tratamiento_path(@tratamiento) %> |
+<%= link_to 'Back', tratamientos_path %>

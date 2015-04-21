@@ -1,0 +1,33 @@
+<%= form_for(@medicin) do |f| %>
+  <% if @medicin.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@medicin.errors.count, "error") %> prohibited this medicin from being saved:</h2>
+
+      <ul>
+      <% @medicin.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nombre %><br>
+    <%= f.text_field :nombre %>
+  </div>
+  <div class="field">
+    <%= f.label :droga %><br>
+    <%= f.text_field :droga %>
+  </div>
+  <div class="field">
+    <%= f.label :cantidad %><br>
+    <%= f.number_field :cantidad %>
+  </div>
+  <div class="field">
+    <%= f.label :tratamiento_id %><br>
+    <%= f.text_field :tratamiento_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
