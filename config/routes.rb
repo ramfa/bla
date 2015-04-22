@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :photos
+
   resources :medicins
 
   resources :tratamientos
@@ -30,8 +32,7 @@ Rails.application.routes.draw do
   root 'entries#new'
   
   resources :medicins
-  resources :tratamientos
-    # The priority is based upon order of creation: first created -> highest priority.
+  resources :tratamientos    # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
