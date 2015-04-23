@@ -12,13 +12,15 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :nombre %><br>
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
     <%= f.label :provincia %><br>
     <%= f.select :province_id, Province.all.map { |p|[p.name,p.id]  },options ={:prompt => "Seleccione una Provincia"} %>
   </div>
+
+  <div class="field">
+    <%= f.label :nombre_de_localidad %><br>
+    <%= f.text_field :name %>
+  </div>
+  
   <div class="actions">
     <%= f.submit %>
   </div>
