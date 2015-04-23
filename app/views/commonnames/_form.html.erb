@@ -10,15 +10,15 @@
       </ul>
     </div>
   <% end %>
-
+<div class="field">
+    <%= f.label :especie %><br>
+    <%= f.select :kind_id, Kind.all.map{|k|[k.name,k.id]}, options ={:prompt => "Seleccione una Especie"}  %>
+  </div>
   <div class="field">
     <%= f.label :nombre %><br>
     <%= f.text_field :name %>
   </div>
-  <div class="field">
-    <%= f.label :especie %><br>
-    <%= f.select :kind_id, Kind.all.map{|k|[k.name,k.id]} %>
-  </div>
+  
   <div class="actions">
     <%= f.submit %>
   </div>

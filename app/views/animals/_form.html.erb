@@ -10,7 +10,10 @@
       </ul>
     </div>
   <% end %>
-
+<div class="field">
+    <%= f.label :nombre_vulgar %><br>
+    <%= f.select :commonname_id, Commonname.all.map { |c|[c.name,c.id]  }, options ={:prompt => "Seleccione Nombre Vulgar"} %>
+  </div>
   <div class="field">
     <%= f.label :nombre %><br>
     <%= f.text_field :name %>
@@ -35,10 +38,7 @@
     <%= f.label :edad %><br>
     <%= f.number_field :age %>
   </div>
-  <div class="field">
-    <%= f.label :nombre_vulgar %><br>
-    <%= f.select :commonname_id, Commonname.all.map { |c|[c.name,c.id]  } %>
-  </div>
+  
   <div class="actions">
     <%= f.submit %>
   </div>

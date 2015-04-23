@@ -11,17 +11,18 @@
     </div>
   <% end %>
  
+  
+  <div class="field">
+    <%= f.label :donador %><br>
+    <%= f.select :origin_id, Origin.all.map { |o|[o.colector,o.id]  }, options ={:prompt => "Seleccione Donador"} %>
+  </div>
+  <div class="field">
+    <%= f.label :animal %><br>
+    <%= f.select :animal_id, Animal.all.map { |a|[a.name,a.id]  }, options ={:prompt => "Seleccione Nombre Animal"} %>
+  </div>
   <div class="field">
     <%= f.label :fecha %><br>
     <%= f.date_select :dateof %>
-  </div>
-  <div class="field">
-    <%= f.label :donador %><br>
-    <%= f.select :origin_id, Origin.all.map { |o|[o.colector,o.id]  } %>
-  </div>
-  <div class="field">
-    <%= f.label :nombre_del_animal %><br>
-    <%= f.select :animal_id, Animal.all.map { |a|[a.name,a.id]  } %>
   </div>
   <div class="actions">
     <%= f.submit %>

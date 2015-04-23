@@ -13,7 +13,7 @@
 
 ActiveRecord::Schema.define(version: 20150422002122) do
 
-  create_table "Animals", force: :cascade do |t|
+  create_table "animals", force: :cascade do |t|
     t.string   "name"
     t.decimal  "weight"
     t.integer  "numbertag"
@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(version: 20150422002122) do
     t.datetime "updated_at",    null: false
   end
 
-  add_index "Animals", ["commonname_id"], name: "index_animals_on_commonname_id"
+  add_index "animals", ["commonname_id"], name: "index_animals_on_commonname_id"
 
   create_table "commonnames", force: :cascade do |t|
     t.string   "name"
@@ -60,17 +60,6 @@ ActiveRecord::Schema.define(version: 20150422002122) do
 
   add_index "entries", ["animal_id"], name: "index_entries_on_animal_id"
   add_index "entries", ["origin_id"], name: "index_entries_on_origin_id"
-
-  create_table "histories", force: :cascade do |t|
-    t.date     "date"
-    t.text     "signs"
-    t.text     "treatment"
-    t.integer  "animal_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  add_index "histories", ["animal_id"], name: "index_histories_on_animal_id"
 
   create_table "kinds", force: :cascade do |t|
     t.string   "name"

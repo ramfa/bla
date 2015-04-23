@@ -12,10 +12,13 @@
       </ul>
     </div>
   <% end %>
-
+  <div class="field">
+    <%= f.label :localidad %><br>      
+    <%=  f.grouped_collection_select(:locality_id, @provinces, :localities, :name, :id, :name , options ={:prompt => "Seleccione una Localidad"} ) %>
+  </div>
   <div class="field">
     <%= f.label :donador %><br>
-    <%= f.text_area :colector %>
+    <%= f.text_field :colector %>
   </div>
   <div class="field">
     <%= f.label :dirección %><br>
@@ -32,11 +35,6 @@
   <div class="field">
     <%= f.label :características_distintivas %><br>
     <%= f.text_area :features %>
-  </div>
-  
-  <div class="field">
-    <%= f.label :localidad %><br>      
-    <%=  f.grouped_collection_select(:locality_id, @provinces, :localities, :name, :id, :name , options ={:prompt => "Seleccione una Localidad"} ) %>
   </div>
 
   <div class="actions">
