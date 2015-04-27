@@ -1,4 +1,4 @@
-<p id="notice"><%= notice %></p>
+
 
 <p>
   <strong>Fecha:</strong>
@@ -11,8 +11,10 @@
 </p>
 
 <p>
-  <strong>Commonname:</strong>
-  <%= @tratamiento.commonname %>
+  <strong>Nombre Vulgar:</strong>
+  <% if @tratamiento.commonname %>
+  <%= @tratamiento.commonname.name %>
+  <% end %>
 </p>
 <%= image_tag @tratamiento.photo.url %>
 <%= image_tag @tratamiento.photo.url(:medium) %>

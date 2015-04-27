@@ -18,7 +18,7 @@
         <td><%= tratamiento.fecha %></td>
         <td><%= tratamiento.signos_clinicos %></td>
         <td><% if tratamiento.commonname %>
-        <%= tratamiento.animal_id.name%>
+        <%= tratamiento.commonname.name%>
         <% end %></td>
         <td><%= link_to 'Show', tratamiento %></td>
         <td><%= link_to 'Edit', edit_tratamiento_path(tratamiento) %></td>
