@@ -1,17 +1,23 @@
 <p id="notice"><%= notice %></p>
+<p>
+  <strong>Nombre Vulgar:</strong>
+  <% if @animal.commonname %>
+  <%= @animal.commonname.name %>
+  <% end %>
+</p>
 
 <p>
-  <strong>Name:</strong>
+  <strong>Nombre del Animal:</strong>
   <%= @animal.name %>
 </p>
 
 <p>
-  <strong>Weight:</strong>
+  <strong>Peso:</strong>
   <%= @animal.weight %>
 </p>
 
 <p>
-  <strong>Numbertag:</strong>
+  <strong>Etiqueta:</strong>
   <%= @animal.numbertag %>
 </p>
 
@@ -21,19 +27,16 @@
 </p>
 
 <p>
-  <strong>Capturedate:</strong>
+  <strong>Fecha de Captura:</strong>
   <%= @animal.capturedate %>
 </p>
 
 <p>
-  <strong>Age:</strong>
+  <strong>Edad:</strong>
   <%= @animal.age %>
 </p>
 
-<p>
-  <strong>Commonname:</strong>
-  <%= @animal.commonname %>
-</p>
+
 
 <%= link_to 'Edit', edit_animal_path(@animal) %> |
 <%= link_to 'OK', new_entry_path %>

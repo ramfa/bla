@@ -5,13 +5,13 @@
 <table>
   <thead>
     <tr>
+      <th>Nombre Vulgar</th>
       <th>Nombre</th>
       <th>Peso</th>
       <th>Número Etiqueta</th>
       <th>Microchip</th>
       <th>Día de Captura</th>
       <th>Edad</th>
-      <th>Nombre Vulgar</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -19,16 +19,17 @@
   <tbody>
     <% @animals.each do |animal| %>
       <tr>
+      <td><% if animal.commonname %>
+        <%= animal.commonname.name %>
+        <% end %>
+        </td>
         <td><%= animal.name %></td>
         <td><%= animal.weight %></td>
         <td><%= animal.numbertag %></td>
         <td><%= animal.microchip %></td>
         <td><%= animal.capturedate %></td>
         <td><%= animal.age %></td>
-        <td><% if animal.commonname %>
-        <%= animal.commonname.name %>
-        <% end %>
-        </td>
+        
         <td><%= link_to 'Ver', animal %></td>
         <td><%= link_to 'Editar', edit_animal_path(animal) %></td>
         <td><%= link_to 'Eliminar', animal, method: :delete, data: { confirm: 'Are you sure?' } %></td>

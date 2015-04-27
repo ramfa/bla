@@ -32,6 +32,9 @@
     color:s;
     text-decoration: none;
 }
+    #a{
+      color: #FFFFFF
+    }
     #section .navbar{
     border-radius: 0px;
     border: medium none;
@@ -83,14 +86,14 @@ padding-left: 15px;
 <body>     
   
 <div id="main-wrapper">
-<div id="section">
+ <div id="section">
   <%= render 'share/navbar'%>	
-</div>
-<%= render 'share/alert' %>
-<div id="section2">
-<%= yield %>  
-</div>
-</div>
+ </div>
+ <%= render 'share/alert' %>
+ <div id="section2">
+  <%= yield %>  
+ </div>
+ </div>
 <div id="footer">
 	<p class="navbar-text pull-right">
 <% if user_signed_in? %>

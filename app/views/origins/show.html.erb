@@ -1,33 +1,35 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Colector:</strong>
+  <strong>Donador:</strong>
   <%= @origin.colector %>
 </p>
 
 <p>
-  <strong>Address:</strong>
+  <strong>Dirección:</strong>
   <%= @origin.address %>
 </p>
 
 <p>
-  <strong>Feeding:</strong>
+  <strong>Alimentación:</strong>
   <%= @origin.feeding %>
 </p>
 
 <p>
-  <strong>Capmethod:</strong>
+  <strong>Metodo de Captura:</strong>
   <%= @origin.capmethod %>
 </p>
 
 <p>
-  <strong>Features:</strong>
+  <strong>Caracteristicas:</strong>
   <%= @origin.features %>
 </p>
 
 <p>
-  <strong>Province:</strong>
-  <%= @origin.province %>
+  <strong>Provincia:</strong>
+  <% if @origin.province %>
+  <%= @locality.name %>
+  <% end %>
 </p>
 
 <%= link_to 'Edit', edit_origin_path(@origin) %> |

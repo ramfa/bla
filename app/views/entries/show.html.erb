@@ -6,14 +6,18 @@
 </p>
 
 <p>
-  <strong>COLECTOR</strong>
-  <%= @entry.origin %>
+  <strong>DONADOR</strong>
+  <% if @entry.origin %>
+  <%= @entry.origin.colector %>
+ <% end %>
+
 </p>
 
 <p>
   <strong>ANIMAL</strong>
-  
-  <%= @entry.animal %>
+  <% if @entry.animal %>
+  <%= @entry.animal.name %>
+ <% end %>
 </p>
 
 <%= link_to 'Edit', edit_entry_path(@entry) %> |
