@@ -1,0 +1,18 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Animal:</strong>
+  <% if @history.animal %>
+  <%= @history.animal.name %>
+  <% end %>
+</p>
+
+<p>
+  <strong>Tratamiento:</strong>
+  <% if @history.tratamiento %>
+  <%= @history.tratamiento.signos_clinicos %>
+  <% end %>
+</p>
+
+<%= link_to 'Edit', edit_history_path(@history) %> |
+<%= link_to 'Back', histories_path %>
