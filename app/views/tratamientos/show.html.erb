@@ -1,5 +1,3 @@
-
-
 <p>
   <strong>Fecha:</strong>
   <%= @tratamiento.fecha %>
@@ -11,13 +9,12 @@
 </p>
 
 <p>
-  <strong>Nombre Vulgar:</strong>
-  <% if @tratamiento.commonname %>
-  <%= @tratamiento.commonname.name %>
-  <% end %>
+<strong> Descripción: </strong>
+<%= @tratamiento.descripcion %>
 </p>
+
 <%= image_tag @tratamiento.photo.url %>
 <%= image_tag @tratamiento.photo.url(:medium) %>
 <%= image_tag @tratamiento.photo.url(:thumb) %>
 <%= link_to 'Edit', edit_tratamiento_path(@tratamiento) %> |
-<%= link_to 'Back', tratamientos_path %>
+<%= link_to 'OK', new_history_path %>

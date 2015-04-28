@@ -1,13 +1,13 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listado Historias Clinicas</h1>
+<h1>Tratamientos</h1>
 
 <table>
   <thead>
     <tr>
       <th>Fecha</th>
       <th>Signos clinicos</th>
-      <th>Nombre Animal</th>
+      
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -17,9 +17,6 @@
       <tr>
         <td><%= tratamiento.fecha %></td>
         <td><%= tratamiento.signos_clinicos %></td>
-        <td><% if tratamiento.commonname %>
-        <%= tratamiento.commonname.name%>
-        <% end %></td>
         <td><%= link_to 'Show', tratamiento %></td>
         <td><%= link_to 'Edit', edit_tratamiento_path(tratamiento) %></td>
         <td><%= link_to 'Destroy', tratamiento, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -30,4 +27,3 @@
 
 <br>
 
-<%= link_to 'Nuevo Tratamiento', new_tratamiento_path %>

@@ -5,8 +5,9 @@
 <table>
   <thead>
     <tr>
-      <th>Nombre Vulgar</th>
+      
       <th>Nombre</th>
+      <th>Nombre Vulgar</th>
       <th>Peso</th>
       <th>Número Etiqueta</th>
       <th>Microchip</th>
@@ -19,11 +20,11 @@
   <tbody>
     <% @animals.each do |animal| %>
       <tr>
-      <td><% if animal.commonname %>
-        <%= animal.commonname.name %>
-        <% end %>
-        </td>
+      
         <td><%= animal.name %></td>
+        <td><% if animal.commonname %>
+        <%= animal.commonname.name %>
+        <% end %></td>
         <td><%= animal.weight %></td>
         <td><%= animal.numbertag %></td>
         <td><%= animal.microchip %></td>

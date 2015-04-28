@@ -23,10 +23,10 @@
     <%= f.label :descripcion %><br>
     <%= f.text_area :descripcion %>
   </div>
-  <div class="field">
+  <!-- <div class="field">
     <%= f.label :nombre_animal %><br>      
     <%= f.grouped_collection_select(:animal_id, @commonnames, :animals, :name, :id, :name , options ={:prompt => "Seleccione un Animal"} ) %>
-  </div>
+  </div> -->
   <div class="field">
     <%= f.label :asset %><br>
     <%= f.file_field :asset %>

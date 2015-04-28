@@ -4,7 +4,7 @@ class AnimalsController < ApplicationController
   # GET /animals
   # GET /animals.json
   def index
-    @animals = Animal.all
+    @animals = Animal.order(params[:order]).all
   end
 
   # GET /animals/1

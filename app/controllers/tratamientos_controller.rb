@@ -70,7 +70,7 @@ class TratamientosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def tratamiento_params
-      params.require(:tratamiento).permit(:fecha, :signos_clinicos, :commonname_id)
+      params.require(:tratamiento).permit(:fecha, :signos_clinicos, :commonname_id, :descripcion)
     end
     def set_commonnames
       @commonnames=Commonname.order("name").all
